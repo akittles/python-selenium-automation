@@ -1,0 +1,51 @@
+body {
+    margin: 0px;
+    background-image: url("//external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F1567679.jpg&f=1&nofb=1&ipt=972c7de8d07417b71c3a328a3cf6f846c6c67c3c3ff9fb97d30ac5dc6aff980c&ipo=images");
+    font-family: Helvetica;
+    font-size: 15px;
+}
+
+
+
+div.block.header {
+    margin: 0px;
+    background-color: #9fc9cc;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+h1 {
+    margin: 0px;
+}
+
+div.block {
+    background-color: black;
+    padding: 8px;
+}
+
+div#coffee {
+    background-image: url('https://media.istockphoto.com/id/1135359711/photo/roasted-coffee-beans-falling-down.jpg?s=1024x1024&w=is&k=20&c=Modx-6Tj8G92ou-4pyG4ONlew_TFfNYc1Bg76Hs_LtI=');
+}
+span.undr{
+    text-decoration: underline;
+}
+
+a:link{
+    color: white;
+
+}
+
+a:visited {
+    color: purple;
+}
+a:hover {
+    color:yellow;
+    text-transform: lowercase;
+}
+
+a:active {
+    color: orange;
+
+}

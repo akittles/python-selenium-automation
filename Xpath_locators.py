@@ -39,7 +39,7 @@ driver.find_element(By.XPATH, "//a[text()='Best Sellers']")
 
 # text() and attributes
 driver.find_element(By.XPATH, "//a[text()='Best Sellers' and @class= 'nav-a  ']")
-driver.find_element(By.XPATH, "//a[@class= ''nav-a ' and text()='Best Sellers']")
+driver.find_element(By.XPATH, "//a[@class= 'nav-a ' and text()='Best Sellers']")
 
 # connecting to parent node
 driver.find_element(By.XPATH, "//div[@id='nav-xshop']//a[text()='Best Sellers']")
