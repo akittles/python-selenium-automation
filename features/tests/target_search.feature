@@ -33,17 +33,6 @@ Feature: Target main page search tests
     |iphone   | iphone        |
 
 
-  Scenario: User can add a product to cart
-    Given Open target main page
-    When Search for mug
-    And Click on Add to Cart button
-    And Store product name
-    And Confirm Add to Cart button from side navigation
-    And Open cart page
-    Then Verify cart has 1 item(s)
-    Then Verify cart has correct product
-
-#
 #  ---------------Can also do it like this-------------
 #  Scenario Outline: User can search for product
 #    Given Open target main page
@@ -55,3 +44,19 @@ Feature: Target main page search tests
 #    |coffee |
 #    |tea |
 #    |iphone |
+
+  Scenario: User can add a product to cart
+    Given Open target main page
+    When Search for mug
+    And Click on Add to Cart button
+    And Store product name
+    And Confirm Add to Cart button from side navigation
+    And Open cart page
+    Then Verify cart has 1 item(s)
+    Then Verify cart has correct product
+
+
+  Scenario: Verify that user can see product names and images
+    Given Open target main page
+    When Search for AirPods (3rd Generation)
+    Then Verify that every product has a name and an image
