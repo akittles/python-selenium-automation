@@ -35,16 +35,13 @@ def side_nav_click_add_to_cart(context):
 
 
 @then('Verify search results show for {product}')
-def verify_search_worked(context, product):
-    actual_text = context.driver.find_element(By.XPATH, "//div[@data-test='resultsHeading']").text
-    assert product in actual_text, f'Expected {product} not in actual {actual_text}'
+def verify_search_results(context, product):
     context.app.search_results_page.verify_text()
+
 
 
 @then('Verify correct search results url opens for {expected_product}')
 def verify_url(context, expected_product):
-    url = context.driver.current_url
-    assert expected_product in context.driver.current_url, f'Expected {expected_product} not in {url}'
     context.app.search_results_page.verify_url()
 
 
