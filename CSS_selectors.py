@@ -52,6 +52,8 @@
 # driver.find_element(By.CSS_SELECTOR, "[placeholder*='Search Ama']") #Ama = Amazon
 # driver.find_element(By.CSS_SELECTOR, "a[href*='ap_signin_notification_privacy_notice?']")
 # driver.find_element(By.CSS_SELECTOR, "a[class*='ap_signin_notification_privacy_notice?']")
+# -------------------------------------tag--attribute
+
 #
 # # Multiple nodes. parent to child # separate nodes with a space in between
 # driver.find_element(By.CSS_SELECTOR, "div.a-box div#legalTextRow a[href*='condition']")
