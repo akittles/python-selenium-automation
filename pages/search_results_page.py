@@ -15,3 +15,17 @@ class SearchResultsPage(Page):
     def verify_url(self):
         url = self.driver.current_url
         assert 'coffee' in url, f'Expected "coffee" not in {url}'
+
+    def verify_products_name_img(self):
+        product_title = (By.CSS_SELECTOR, "[data-test='product-title']")
+        product_img = (By.CSS_SELECTOR, 'img')
+
+        self.driver.execute_script("window.scrollBy(0,2000)", "")
+        sleep(4)
+        self.driver.execute_script("window.scrollBy(0,2000)", "")
+        all_products = self.driver.find_elements(By.CSS_SELECTOR, "[data-test='@web/site-top-of-funnel/ProductCardWrapper']")  # [WebEl1, WebEl2, WebEl3, WebEl4]
+        for product in all_products:
+            title = product.find_element(*product_title).text
+            assert title, 'Product title not shown'
+            print(title)
+            product.find_element(*product_img)
