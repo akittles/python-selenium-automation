@@ -1,9 +1,13 @@
 from webbrowser import Chrome
-
+from pages.cart_page import CartPage
+from pages.choose_options_menu_page import ChooseOptionsMenuPage
 from pages.header import Header
 from pages.main_page import MainPage
 from pages.base_page import Page
+from pages.privacy_policy_page import PrivacyPage
 from pages.search_results_page import SearchResultsPage
+from pages.target_app_page import TargetAppPage
+from pages.login_page import LoginPage
 
 
 class Application:
@@ -11,7 +15,13 @@ class Application:
 
         self.base_page = Page(driver)
 
+        self.login_page = LoginPage(driver)
+        self.cart_page = CartPage(driver)
         self.header = Header(driver)
         self.main_page = MainPage(driver)
+        self.privacy_page = PrivacyPage(driver)
         self.search_results_page = SearchResultsPage(driver)
+        self.target_app_page = TargetAppPage(driver)
+        self.choose_options_menu_page = ChooseOptionsMenuPage(driver)
+
 
