@@ -19,7 +19,7 @@ def click_and_verify_colors(context):
     actual_colors = []
 
     colors = context.driver.find_elements(*COLOR_OPTIONS)  # [webelement1, webelement2, webelement3]
-    for color in colors: #for color in colors [:4] ***loop through the first 4 colors
+    for color in colors:
         color.click()
 
         selected_color = context.driver.find_element(*SELECTED_COLOR).text  # 'Color\nBlack'
@@ -30,26 +30,3 @@ def click_and_verify_colors(context):
         print(actual_colors)
 
     assert expected_colors == actual_colors, f'Expected {expected_colors} did not match actual {actual_colors}'
-
-#
-# SHOE_COLOR_OPTIONS = (By.CSS_SELECTOR, "div[aria-label='Carousel'] li")
-# SELECTED_SHOE_COLOR = (By.CSS_SELECTOR, "[data-test='@web/VariationComponent'] [href='/icons/PaginationBack.svg#PaginationBack']")
-#
-#
-# @then('Verify user can click through shoe colors')
-# def click_and_verify_shoe_colors(context):
-#     expected_colors = ['grey', 'black/gum', 'dark khaki', 'navy/tan']
-#     actual_colors = []
-#
-#     colors = context.driver.find_elements(*COLOR_OPTIONS)  # [webelement1, webelement2, webelement3]
-#     for color in colors[:4]: #for color in colors [:4] ***loop through the first 4 colors
-#         color.click()
-#
-#         selected_color = context.driver.find_element(*SELECTED_COLOR).text  # 'Color\nBlack'
-#         print('Current color', selected_color)
-#
-#         selected_color = selected_color.split('\n')[1]  # remove 'Color\n' part, keep Black'
-#         actual_colors.append(selected_color)
-#         print(actual_colors)
-#
-#     assert expected_colors == actual_colors, f'Expected {expected_colors} did not match actual {actual_colors}'
