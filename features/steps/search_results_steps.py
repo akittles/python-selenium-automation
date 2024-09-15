@@ -26,7 +26,7 @@ def store_product_name(context):
 
 @when('Confirm Add to Cart button from side navigation')
 def side_nav_click_add_to_cart(context):
-    context.app.choose_options_menu_page.side_nav_click_add_to_cart()
+    context.app.main_page.side_nav_click_add_to_cart()
     # context.driver.find_element(*SIDE_NAV_ADD_TO_CART_BTN).click()
     # sleep(6)
 
