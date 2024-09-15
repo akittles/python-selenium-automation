@@ -1,6 +1,5 @@
 from webbrowser import Chrome
 from pages.cart_page import CartPage
-from pages.choose_options_menu_page import ChooseOptionsMenuPage
 from pages.header import Header
 from pages.main_page import MainPage
 from pages.base_page import Page
@@ -22,6 +21,5 @@ class Application:
         self.privacy_page = PrivacyPage(driver)
         self.search_results_page = SearchResultsPage(driver)
         self.target_app_page = TargetAppPage(driver)
-        self.choose_options_menu_page = ChooseOptionsMenuPage(driver)
 
 
