@@ -5,10 +5,9 @@ Feature: Sign In page opens
   Scenario: User can open sign in page
     Given Open target main page
     When Click on sign in
-    When Click on window sign in
+    When Click on side window sign in
     Then Verify user on sign_in page
-#    When User inputs email address
-#    And User inputs password
-#    Then Click on sign in with password
-#    Then Verify user is logged in
+    When User inputs email address and password
+    And Click on sign in with password
+    Then Verify user is logged in
 
