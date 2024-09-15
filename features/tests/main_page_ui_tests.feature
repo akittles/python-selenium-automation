@@ -7,4 +7,4 @@ Feature: Tests for main page UI
 
   Scenario: Verify header has correct amount links
     Given Open target main page
-    Then Verify header has 6 links
+    Then Verify can click every link
