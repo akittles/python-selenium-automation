@@ -2,24 +2,38 @@ from selenium.webdriver.common.by import By
 from behave import given, when, then
 from time import sleep
 
-# ------------CHANGE FILE NAME TO LOGIN STEPS------------
+
+@when('Click on sign in')
+def click_sign_in_btn(context):
+    context.app.header.click_sign_in_btn()
+
+
+@when('Click on side window sign in')
+def side_window_signin_btn(context):
+    # context.driver.find_element(By.CSS_SELECTOR, "[data-test='accountNav-signIn']").click()
+    context.app.main_page.side_window_signin_btn()
+    sleep(6)
+
+
+@when('User inputs email address and password')
+def user_inputs_email_and_password(context):
+    context.app.login_page.enter_username_password()
+
+
+@when('Click on sign in with password')
+def sign_in_with_password(context):
+    context.app.login_page.sign_in_with_password()
+
+
+@then('Verify user is logged in')
+def verify_user_is_logged_in(context):
+    context.app.login_page.verify_user_is_logged_in()
+
+
 @then('Verify user on sign_in page')
 def verify_sign_in_page(context):
-    context.app.sign_in_menu_page.verify_sign_in_page()
+    context.app.login_page.verify_sign_in_page()
 
-# ---------------------------------------------------------------------
-# ------POSSIBLY DELETE BELOW
-
-#--------THE 2 WHENS HERE ARE IN MAIN PAGE STEPS
-# @when('Click on sign in')
-# def first_signin_btn(context):
-#     context.app.header.click_sign_in()
-#
-# #
-# @when('Click on window sign in')
-# def window_signin_btn(context):
-#     context.app.header.click_window_sign_in()
-#     sleep(6)
 
 # -------------THIS STEP IS IN CART STEPS
 # @then('Verify your cart is empty message is shown')
