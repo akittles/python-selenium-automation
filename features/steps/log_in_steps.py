@@ -35,7 +35,7 @@ def verify_sign_in_page(context):
     context.app.login_page.verify_sign_in_page()
 
 
-# -------------THIS STEP IS IN CART STEPS
+# -------------THIS STEP IS IN CART STEPS-----DELETE
 # @then('Verify your cart is empty message is shown')
 # def verify_cart_is_empty(context):
 #     expected_text = 'Your cart is empty'
