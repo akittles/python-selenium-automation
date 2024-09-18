@@ -1,6 +1,4 @@
-# CHANGE TITLE TO LOG IN
 Feature: Sign In page opens
-  # Enter feature description here
 
   Scenario: User can open sign in page
     Given Open target main page
@@ -10,4 +8,5 @@ Feature: Sign In page opens
     When User inputs email address and password
     And Click on sign in with password
     Then Verify user is logged in
+
 
