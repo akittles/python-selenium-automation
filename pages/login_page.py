@@ -26,5 +26,3 @@ class LoginPage(Page):
 
     def sign_in_with_password(self):
         self.driver.find_element(*self.SIGN_IN_PASS_BTN).click()
-
-
