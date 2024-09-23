@@ -15,9 +15,20 @@ def side_window_signin_btn(context):
     sleep(6)
 
 
-@when('User inputs email address and password')
-def user_inputs_email_and_password(context):
-    context.app.login_page.enter_username_password()
+@when('User inputs valid email address and password')
+def user_inputs_valid_email_and_password(context):
+    context.app.login_page.user_inputs_valid_email_and_password()
+
+
+@when('User inputs invalid email')
+def user_inputs_invalid_email(context):
+    context.app.login_page.user_inputs_invalid_email()
+
+
+@when('User inputs invalid password')
+def user_inputs_invalid_password(context):
+    context.app.login_page.user_inputs_invalid_password()
+    sleep(2)
 
 
 @when('Click on sign in with password')
@@ -35,13 +46,11 @@ def verify_sign_in_page(context):
     context.app.login_page.verify_sign_in_page()
 
 
-# -------------THIS STEP IS IN CART STEPS-----DELETE
-# @then('Verify your cart is empty message is shown')
-# def verify_cart_is_empty(context):
-#     expected_text = 'Your cart is empty'
-#     actual_element = context.driver.find_element(By.CSS_SELECTOR, "[data-test='boxEmptyMsg']")
-#     actual_text = actual_element.text
-#     print(actual_text)
-#     assert expected_text in actual_text, f'Expected text {expected_text} is not in actual text {actual_text}'
-#     #
-#     print('Test case passed')
+@then('Verify user sees Please enter a valid email or phone number')
+def verify_invalid_email_or_phone_number(context):
+    context.app.login_page.verify_invalid_email_or_phone_number()
+
+# --------SEE NOTE IN LOGIN_PAGE
+# @then('Verify user sees Please enter a valid password')
+# def verify_invalid_password(context):
+#     context.app.login_page.verify_invalid_password()
