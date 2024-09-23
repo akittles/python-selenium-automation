@@ -15,6 +15,7 @@ def browser_init(context, scenario_name):
     """
     :param context: Behave context
     """
+
     driver_path = 'C:/Users/Owner/python-selenium-automation/chromedriver-win64/chromedriver-win64/chromedriver.exe'
     # # #driver_path = ChromeDriverManager().install() ##LEAVE COMMENTED OUT####
     service = Service(driver_path)
