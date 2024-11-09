@@ -1,4 +1,4 @@
-# Created by Owner at 8/4/2024
+@smoke
 Feature: Tests for main page UI
 
   Scenario: Verify header in shown

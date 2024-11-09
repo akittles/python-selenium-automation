@@ -10,11 +10,14 @@ LISTINGS = (By.CSS_SELECTOR, "[data-test='@web/site-top-of-funnel/ProductCardWra
 PRODUCT_TITLE = (By.CSS_SELECTOR, "[data-test='product-title']")
 PRODUCT_IMG = (By.CSS_SELECTOR, 'img')
 
+# SEPARATE THE VARIABLE ABOVE AND PASSING IT IN THE CODE WITH AN * WHEN YOU START GETTING A LOT OF STEPS
+# BECAUSE SOME OF THE STEPS MAY REUSE THE SAME LOCATOR. SO ADD THEM TO THE TOP OF THE FILE
+
 
 @when('Click on Add to Cart button')
 def click_add_to_cart(context):
-    context.driver.find_element(*ADD_TO_CART_BTN).click()  # always clicks on 1st add to cart btn
-    # context.driver.find_elements(By.CSS_SELECTOR, "[id*='addToCartButton']")[0].click
+    context.driver.find_element(*ADD_TO_CART_BTN).click()  # find_element always clicks on 1st add to cart btn
+# context.driver.find_elements(By.CSS_SELECTOR, "[id*='addToCartButton']")[0].click #find_elements looks for multiples
     context.driver.wait.until(EC.visibility_of_element_located(SIDE_NAV_PRODUCT_NAME))
 
 
@@ -29,6 +32,8 @@ def side_nav_click_add_to_cart(context):
     context.app.main_page.side_nav_click_add_to_cart()
     # context.driver.find_element(*SIDE_NAV_ADD_TO_CART_BTN).click()
     # sleep(6)
+    # can use explicit wait below instead of sleep
+    # context.driver.wait.until(EC.visibility_of_element_located(SIDE_NAV_PRODUCT_NAME))
 
 
 @when('Hover favorites icon')

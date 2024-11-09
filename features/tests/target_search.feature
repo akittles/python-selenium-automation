@@ -1,7 +1,9 @@
 ## Created by Owner at 7/25/2024
 Feature: Target main page search tests
 
-#-----With the Scenario Outline you can get rid of the scenarios below------
+  @smoke @regression
+
+
   Scenario: User can search for coffee
     Given Open target main page
     When Search for coffee
@@ -45,6 +47,7 @@ Feature: Target main page search tests
 #    |tea |
 #    |iphone |
 
+  @smoke
   Scenario: User can add a product to cart
     Given Open target main page
     When Search for mug

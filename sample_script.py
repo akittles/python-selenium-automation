@@ -12,7 +12,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 # get the path to the ChromeDriver executable
 driver_path = ChromeDriverManager().install()
-driver_path = 'C:/Users/Owner/Desktop/chromedriver'
+driver_path = 'C:/Users/Owner/python-selenium-automation/chromedriver-win64/chromedriver.exe'
 
 # create a new Chrome browser instance
 # service = Service(driver_path)
@@ -34,8 +34,8 @@ search.send_keys('car')
 # click search button
 
 SEARCH_BTN = (By.NAME, 'btnK')
-# button = driver.wait.until(EC.element_to_be_clickable((By.NAME, 'btnK')))
-button = driver.wait.until(EC.element_to_be_clickable(SEARCH_BTN))
+# button = driver.wait.until(EC.element_to_be_clickable((By.NAME, 'btnK'))) #this takes an extra )
+button = driver.wait.until(EC.element_to_be_clickable(SEARCH_BTN)) #no * for EC's (SEARCH_BTN)
 button.click()
 # if you want to set multiple conditions (wait.until) to be met, place on separate line
 # driver.wait.until(EC.new_window_is_opened())
