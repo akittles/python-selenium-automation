@@ -1,9 +1,7 @@
 ## Created by Owner at 7/25/2024
 Feature: Target main page search tests
 
-  @smoke @regression
-
-
+  @smoke @regression # <----tagging testsallure
   Scenario: User can search for coffee
     Given Open target main page
     When Search for coffee

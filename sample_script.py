@@ -12,7 +12,9 @@ from selenium.webdriver.support import expected_conditions as EC
 
 # get the path to the ChromeDriver executable
 driver_path = ChromeDriverManager().install()
-driver_path = 'C:/Users/Owner/python-selenium-automation/chromedriver-win64/chromedriver.exe'
+
+# ALTERNATIVE PATH
+# driver_path = 'C:/Users/Owner/python-selenium-automation/chromedriver-win64/chromedriver.exe'
 
 # create a new Chrome browser instance
 # service = Service(driver_path)
@@ -31,7 +33,7 @@ search = driver.find_element(By.NAME, 'q')
 search.clear()
 search.send_keys('car')
 
-# click search button
+# click search button, CREATE A VARIABLE WITH LOCATOR
 
 SEARCH_BTN = (By.NAME, 'btnK')
 # button = driver.wait.until(EC.element_to_be_clickable((By.NAME, 'btnK'))) #this takes an extra )

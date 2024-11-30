@@ -44,6 +44,6 @@ driver.find_element(By.XPATH, "//a[@class= 'nav-a ' and text()='Best Sellers']")
 # connecting to parent node
 driver.find_element(By.XPATH, "//div[@id='nav-xshop']//a[text()='Best Sellers']")
 driver.find_element(By.XPATH, "//div[@id='nav-xshop']//a[contains(text()='Best')]")
-
+#                                       ^                   ^-----this is selecting the parent nodes
 # contains()
 driver.find_element(By.XPATH, "//h2[contains(text(), 'under $30')]")

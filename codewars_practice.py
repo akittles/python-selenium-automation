@@ -1,49 +1,59 @@
-def is_centenarian(age):
-    if int(age) >= 100:
-        return True
-    else:
-        return False
-
-
-age = input("Enter your age: ")
-
-print(is_centenarian(age))
 
 
 
+# create an interger variable for x
+# x = 5
+# # create an interger variable for y
+# y = 3
+# # put x and y in sum
+# sum = x + y
+# # tell user the answer
+# print(sum)
 
-# # create an interger variable for x
-# # x = 5
-# # # create an interger variable for y
-# # y = 3
-# # # put x and y in sum
-# # sum = x + y
-# # # tell user the answer
-# # print(sum)
+
 # # ---------------------------------------------
 #
 #
 # # Task: separate the url
-# url = 'www.codewars.com#about'
+
 # def sep_url(url):
-
-# # result should be: www.codewars.com
-# # Hint: use the .split() function to split the url string
-# # # ----------------------------
+#     new_url =
+#     return new_url
+#
+#
 # #
-# # Write a method (or function, depending on the language) that converts a string to camelCase,
-# # that is, all words must have their first letter capitalized and spaces must be removed.
+# url = 'www.codewars.com#about'
+#
+# print(sep_url(url))
 
-# ## join the words and Capitalize each word in words
-# # think, camel case equals capitalizing each word and joining them
+# ----------------------------
+
+# Write a method (or function, depending on the language) that converts a string to camelCase,
+# that is, all words must have their first letter capitalized and spaces must be removed.
+
+# join the words and Capitalize each word in words
+# think, camel case equals capitalizing each word and joining them
 
 # Split by underscores or spaces
 
+# DID I GET IT RIGHT THE FIRST TIME? NO
 # def to_camel_case(text):
+#     words =
+#     camel_case_words =
+#     return camel_case_words
+#
+#
+# print(to_camel_case('camel_case_word'))  # Outputs: "CamelCaseWord"
 
+# --------Alternative where it doesnt capitalize the first word-----------
 
-# return camel_case_text
-
+# def to_camel_case(text):
+#     words = text.split('_') # 'camel' '_' 'case'
+#     camel_case_words = words[0].lower() + ''.join(word.capitalize() for word in words[1:])
+#     return camel_case_words
+#
+#
+# print(to_camel_case('camel_case_word'))
 
 # # Hint: use .split() .join() and .capitalize() methods to capitalize and join the words separately.
 #
@@ -68,23 +78,17 @@ print(is_centenarian(age))
 # # Output: "even"
 # #
 #
-# def check_sum(x,y,z):
-# Calculate the sum of x, y, and z
-
-#
-#     # Check if the sum is even
-
-#
-#     # If it's not even, it's odd
-
-
-# # Taking user input
-
-
-# # Call the function and print the result
-
+# def check_sum(x, y, z):
+#     sum = x + y + z
 #
 #
+#
+# x = int(input("Enter the first number: "))
+# y = int(input("Enter the second number: "))
+# z = int(input("Enter the third number: "))
+#
+# print(check_sum(x, y, z))
+
 # -----------------------------------
 #
 # Trolls are attacking your comment section!
@@ -98,14 +102,16 @@ print(is_centenarian(age))
 #
 # Note: for this kata y isn't considered a vowel.
 # def remove_vowels(comment):
-# Define vowels, including uppercase
-# vowels = "aeiouAEIOU"
-#     # the result equals joining each char in the comment if the char is not in vowels
-# Use list comprehension to filter out vowels
-#  return result
+#     vowels = "aeiouAEIOU"
+#
+# #     # Use list comprehension to filter out vowels
+# #     # hint: join char for char in the comment if the char is not in vowels
+#     comment =                                                                                                                                                                          ;O;O;O;O;O;O;O;O;O;O;O;O;O;O;O;O;O;O;O;O;O;O;O;O;O;O;O;O;O;O;O;O;O;O;O.;;;OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+#     #
+#     return comment  #
 #
 #
-# # Test the function
+# # # # Test the function
 # print(remove_vowels("This website is for losers LOL!"))  # Output: "Ths wbst s fr lsrs LL!"
 
 # ---------------------------------------------
@@ -113,24 +119,39 @@ print(is_centenarian(age))
 
 
 # def is_vowel(word):
-#     # create local variables
+# #     # create local variables
 #     vowels = "aeiouAEIOU"
+#     for :
+#']         if :
+#             word =
 #
-#     #
+#     return word
 #
 #
-# #
-# # # test case
+# # # # test case
 # word = 'anthony'
-#
+# #
 # print(is_vowel(word))
 #
+# -----------------------------------------
+
+
+# def descending_order(numerals):
+#     #call the reverse to be true to put it in reverse order
+#
+#     return numerals
+#
+#
+# numerals = [1, 2, 3, 455, 5, 6, 7, 8, 9]
+# print(descending_order(numerals))
+
+
 # ------------- LESSON 5 INTERVIEW ALGORITHMS--------------------------
 #
 # How do we solve algorithm problems
 #
 # Understand a problem. Get an idea of
-# what we need to do. Typically every
+# what we need to do. Typically, every
 # detail is needed to solve the problem.
 #
 # Use an example to make sure that you
@@ -156,7 +177,47 @@ print(is_centenarian(age))
 #
 # Input: 5 => output: -5
 # Input: -1 => output: -1
+
+#       ###### NEW FUNCTION abs() ######
+
+# def negative_abs(num):
+#     """Returns the negative absolute value of a number.
 #
+#   Args:
+#     num: The input number.
+#
+#   Returns:
+#     The negative absolute value of the input number.
+#     The absolute value of a positive number is the number itself.
+#     The absolute value of a negative number is its opposite (the positive version).
+#     The absolute value of 0 is 0
+#
+#     Write the return code using absolute value (always returns a negative number).
+#   """
+#     return
+#
+#
+# num = int(input("Enter a number: "))
+# print(negative_abs(num))
+
+
+#----------what is the old code----------
+
+# def number(num):
+#     if :
+# #       num =
+# #       return num
+# #   else:
+# #     return
+#
+# #
+# #
+# # # Take input from the user
+# num = int(input("Enter a number: "))
+# # # Print the result from the function
+# print(number(num))
+
+
 # ----------------------------------------
 # The largest of three 5 minutes
 
@@ -173,6 +234,16 @@ print(is_centenarian(age))
 # Example: 124, 21, 32
 # Result = 124
 
+# def largest_number(a, b, c):
+#
+#
+# #
+# #
+# a = 124
+# b = 21
+# c = 32
+#
+# print(largest_number(a, b, c))
 
 # -------------------------------------
 
@@ -191,51 +262,104 @@ print(is_centenarian(age))
 #
 # year = int(input("Enter a year: "))
 
+# A year is a leap year if it is divisible by 4
+# but not by 100, unless it is also divisible by 400
+#
+# A year is # says the variable, year =
+# leap year if it is divisible by 4 # says if year is % 4
+# but not by 100 # says year is also not 100
+# unless it is also % 400 # says
+
+# def is_leap_year(year):
+#     if
+#         return 'Leap Year'
+#     else:
+#         return 'Not Leap Year'
+#
+#
+# year = int(input('Enter a year: '))
+# print(is_leap_year(year))
+
 # ----------------------------------------------
 
 # Slice a String 3 minutes
+
+# s[start:end:step]
 
 #  0  1  2  3  4
 #  A  B  C  D  E
 # -5 -4 -3 -2 -1
 
+# How many right the last time? 11 out of 11
+
 # s = "ABCDE"
 # s[1:2] -?
-# s[:1] - ?
 # s[1:] - ?
 # s[::2] - ?
 # s[2:] - ?
 # s[-2:] - ?
 # s[:-2] - ?
-# Output: ABC -?
-# Output: DE - ?
-# Output: ACE - ?
+# Output: ABC -? s[]
+# Output: DE - ? s[]
+# Output: ACE - ? s[]
+
+
+# ----#### notice s[::2] and s[::-2] gets the same results
+# meaning the start:end:step needs to be read that way not "goes
+# backwards" way
 
 # -----------------------------------------
 
 # Reverse String 3 minutes
 
-#  0  1  2  3  4
-#  A  B  C  D  E
+# s[start:end:step]
+
+#  0  1  2  3  4 # START AT 3 AND GO TO 1
+#  A  B  C  D  E # -1 MEANS THE STEPS ARE BACKWARDS
 # -5 -4 -3 -2 -1
+
 # Example
-# reversed_string = s[3:1:-1] # Output: CD
+# reversed_string = s[3:1:-1] # Output: DC
+
+#               OR
+
+# see it, the -1 FIRST reverses s[] NOT the nums position
+# [3:1] tells you to read it actually as [1:3] its -1,
+# so picture s[3:1:-1] as s[1:3] since the s[] was reversed.
+
+# O  1  2  3  4 # START AT 1 AND GO TO 3
+# E  D  C  B  A
+# -5 -4 -3 -2 -1
+
+# Positive Indices:  0    1    2    3    4
+# Characters:        A    B    C    D    E
+#
+# Negative Indices: -5   -4   -3   -2   -1
+# Characters:        A    B    C    D    E
+
+# reversed_string = s[3:1:-1] # Output: DC
 
 # s = "ABCDE"
 # s[2::-1] - ?
 # s[:0:-1] -?
-# Output: CB - ?
-# Output: BA- ?
+# Output: CB - ? s[]
+# Output: BA- ? s[]
+# ?
+# ?
+# s[]
+# s[]
+
+# How many right the last time? 0 out of 4
 
 # -------------------------------
+
 
 # Reverse integer 10 minutes
 #
 # Given an integer, return the integer with reversed digits.
 #
 # Note:
-# Before reversing, the integer could be either
-# positive or negative.
+# Before reversing, the integer could be either positive or negative.
 #
 # After reversing:
 # The negative integer should remain negative2
@@ -262,9 +386,13 @@ print(is_centenarian(age))
 
 # n = int(input("Enter an integer: "))
 # s = str(n)
-# if
-# else
-# print
+# if s[0] == '-':
+#     s =
+# #     #split from '-' and get the [1] position then join a reverse string
+#     print('-' + s)
+# else:
+#     s = s[::-1]
+#     print(s)
 
 # -----------------------------------------
 
@@ -454,23 +582,32 @@ print(is_centenarian(age))
 
 # -----------FINAL LESSON INTERVIEW ALGORITHMS-------------
 #
-# Nested loops
+################## Nested loops #####################
+
+# THINK----> if there only 1 list
+#               for element in list (outer loop)
+#                 for the same element in list (inner loop)
+#                   print out both results until done with list
 #
+#      ----> if there is multiple list
+#               for element in first list
+#                   for element in second list
+#                       print out both results until done with list
+
+
 # Let’s imagine we have a list lst = ["a", "b", "c"].
 # You want to print all possible two-character combinations.
 #
 # Output: aa, ab, ac, ba, bb, bc, ca, cb, cc
 #
 # lst = ["a", "b", "c"]
-# for :
-#     for
-#         print
 
 # 2nd example
 # Create a Python script that generates a simple
 # multiplication table for numbers ranging from 1 to 10.
 
 # USE RANGE()
+
 
 # -----------------------------------
 #
@@ -481,7 +618,7 @@ print(is_centenarian(age))
 # adj = ["red", "ripe", "tasty"]
 # fruits = ["apple", "banana", "cherry"]
 
-# code here
+
 
 # ----------------------------------------
 

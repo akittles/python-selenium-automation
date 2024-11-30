@@ -7,3 +7,5 @@ class PrivacyPage(Page):
 
     def verify_pp_url(self):
         self.verify_partial_url('/target-privacy-policy')
+
+

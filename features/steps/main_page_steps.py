@@ -37,7 +37,15 @@ def verify_header_link_amount(context, number):
     number = int(number) # turns string "6" into integer 6
     links = context.driver.find_elements(By.CSS_SELECTOR, "[id*= 'utilityNav']")
     assert len(links) == number, f'Expected {number} links, but got {len(links)}'
+
+    # Be careful with find_elements. If you dont want to count all the links and
+    # you just want to see that the links are there, like this:
     # context.driver.find_elements(By.CSS_SELECTOR, "[id*='utilityNav2613542']")
+    # print(links)
+    # do not do this because your test case will not fail but return an empty list.
+    # So you need to do this:
+    # links = context.driver.find_elements(By.CSS_SELECTOR, "[id*='utilityNav2613542']")
+    # assert len(links) > 0, f'Expected 6 links, but got {len(links)}'
 
 
 @then('Verify can click every link')
